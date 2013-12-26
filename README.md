@@ -21,4 +21,8 @@ N'hésitez pas à nous faire parvenir vos remarques et/ou idées pour l'amélior
 
 Licence: Apache V2
 
+
+Développé avec MonoDroid
+
+
 Dispo sur Playstore: https://play.google.com/store/apps/details?id=telCodeRoute.Realogi&hl=fr
