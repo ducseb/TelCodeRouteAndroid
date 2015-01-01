@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="vertical"
+			android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+	android:id="@+id/layoutButton"
+	 android:background="@drawable/Fond">
+	  <ImageView
+            android:src="@drawable/TELCODEROUTE-Titre"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/imgTitre" />
+            <ImageButton
+                android:src="@drawable/bt_commencer_a"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btCommencer" />
+            <ImageButton
+                android:src="@drawable/bt_histo_a"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btHisto" />
+            <ImageButton
+                android:src="@drawable/bt_param_a"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btParam" />
+        </LinearLayout>
+  

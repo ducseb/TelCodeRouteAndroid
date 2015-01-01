@@ -1,0 +1,20 @@
+# First clean the Release target.
+msbuild.exe CodeRouteAndroid.csproj /p:Configuration=Release /t:Clean
+# Now build the project, using the Release target.
+msbuild.exe HelloWorld.csproj /p:Configuration=Release
+/t:PackageForAndroid
+# At this point there is only the unsigned APK - sign it.
+# The script will pause here as jarsigner prompts for the password.
+# It is possible to provide they keystore password for jarsigner.exe by
+adding an extra command line parameter -storepass, for example
+# -storepass <MY_SECRET_PASSWORD>
+# If this script is to be checked in to source code control then it is not
+recommended to include the password as part of this script.
+& 'C:\Program Files\Java\jdk1.6.0_24\bin\jarsigner.exe' -verbose -sigalg
+MD5withRSA -digestalg SHA1 -keystore ./xample.keystore -
+signedjar ./bin/Release/mono.samples.helloworldsigned.
+apk ./bin/Release/mono.samples.helloworld.apk publishingdoc
+# Now zipalign it. The -v parameter tells zipalign to verify the APK
+afterwards.
+& 'C:\Program Files\Android\android-sdk\tools\zipalign.exe' -f -v
+4 ./bin/Release/mono.samples.helloworld-signed.apk ./helloworld.apk

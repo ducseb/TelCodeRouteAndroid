@@ -20,7 +20,8 @@
     <MandroidI18n />
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
-    <TargetFrameworkVersion>v2.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v2.3</TargetFrameworkVersion>
+    <AndroidUseLatestPlatformSdk />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>True</DebugSymbols>
@@ -51,9 +52,9 @@
   <PropertyGroup Condition="'$(Configuration)' == 'Release'">
     <AndroidKeyStore>True</AndroidKeyStore>
     <AndroidSigningKeyStore>Realogi.keystore</AndroidSigningKeyStore>
-    <AndroidSigningStorePass>Caa$0302</AndroidSigningStorePass>
+    <AndroidSigningStorePass>XXXXXX</AndroidSigningStorePass>
     <AndroidSigningKeyAlias>AndroidRealogi</AndroidSigningKeyAlias>
-    <AndroidSigningKeyPass>Caa$0302</AndroidSigningKeyPass>
+    <AndroidSigningKeyPass>XXXXXX</AndroidSigningKeyPass>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Android" />
